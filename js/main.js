@@ -30,7 +30,28 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 
-  // ---- Acordeones (propuesta gastronómica + FAQ) ----
+  // ---- Tabs (propuesta gastronómica, versión desktop) ----
+  document.querySelectorAll('.tabs').forEach(tabs => {
+    const buttons = tabs.querySelectorAll('.tabs__btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        buttons.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+
+        tabs.querySelectorAll('.tabs__panel').forEach(panel => {
+          panel.classList.toggle('is-active', panel.id === `tab-${target}`);
+        });
+      });
+    });
+  });
+
+  // ---- Acordeones (FAQ) ----
   document.querySelectorAll('.acc-item__head').forEach(head => {
     head.addEventListener('click', () => {
       const isOpen = head.getAttribute('aria-expanded') === 'true';

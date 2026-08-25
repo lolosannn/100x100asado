@@ -12,41 +12,70 @@
 </head>
 <body>
 
+<!-- ============ ICONOS REUTILIZABLES (logo, sello) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="icon-logo" viewBox="0 0 140 140">
+    <circle cx="70" cy="70" r="66" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path id="logoCircleTopSym" d="M 20 70 A 50 50 0 0 1 120 70" fill="none"/>
+    <text class="logo-num"><textPath href="#logoCircleTopSym" startOffset="50%" text-anchor="middle">100 X 100</textPath></text>
+    <text x="70" y="88" class="logo-title" text-anchor="middle">ASADO</text>
+    <path d="M46 55 L58 78 M58 55 L46 78" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M82 55 L94 78 M94 55 L82 78" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M48 100 Q70 108 92 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-stamp" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path id="stampTopSym" d="M14 60a46 46 0 0 1 92 0" fill="none"/>
+    <path id="stampBottomSym" d="M106 60a46 46 0 0 1-92 0" fill="none"/>
+    <text class="stamp__text"><textPath href="#stampTopSym" startOffset="50%" text-anchor="middle">ARGENTINA</textPath></text>
+    <text class="stamp__text"><textPath href="#stampBottomSym" startOffset="50%" text-anchor="middle">100x100 ASADO</textPath></text>
+    <path d="M40 55h40v6a5 5 0 01-5 5H45a5 5 0 01-5-5v-6z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M45 55v-8M55 55v-10M65 55v-8M75 55v-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
 <!-- ============ HEADER / NAV ============ -->
 <header class="site-header" id="site-header">
   <a href="#inicio" class="logo" aria-label="100x100 Asado - Inicio">
-    <svg viewBox="0 0 140 140" class="logo-svg" role="img" aria-hidden="true">
-      <circle cx="70" cy="70" r="66" fill="none" stroke="currentColor" stroke-width="2.5"/>
-      <path id="logoCircleTop" d="M 20 70 A 50 50 0 0 1 120 70" fill="none"/>
-      <text class="logo-num">
-        <textPath href="#logoCircleTop" startOffset="50%" text-anchor="middle">100 X 100</textPath>
-      </text>
-      <text x="70" y="88" class="logo-title" text-anchor="middle">ASADO</text>
-      <path d="M46 55 L58 78 M58 55 L46 78" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M82 55 L94 78 M94 55 L82 78" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M48 100 Q70 108 92 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M48 104 Q70 112 92 104" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
+    <svg class="logo-svg" role="img" aria-hidden="true"><use href="#icon-logo"/></svg>
   </a>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <ul class="site-nav__list">
+      <li><a href="#propuesta">PROPUESTA GASTRONÓMICA</a></li>
+      <li><a href="#servicio">NUESTRO SERVICIO</a></li>
+      <li><a href="#nosotros">NOSOTROS</a></li>
+      <li><a href="#galeria">GALERÍA</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <div class="site-header__actions">
+    <a href="#contacto" class="btn btn--blue site-header__cta">PEDÍ TU PRESUPUESTO</a>
+    <div class="social-icons">
+      <a href="https://instagram.com/100x100asado" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://tiktok.com/@100x100asado" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4v9.5a3.5 3.5 0 11-3-3.46" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4c.6 2.2 2.2 3.7 4.5 4" stroke-linecap="round"/></svg>
+      </a>
+      <a href="https://wa.me/5491126082311" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 18l-1.4 3.4L8 20a8 8 0 104-1z" stroke-linejoin="round"/><path d="M8.5 8.6c.2-.5.6-.5.9-.5h.5c.2 0 .4 0 .6.4.2.5.6 1.4.7 1.5.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.2.7.2.4.9 1.4 1.9 2.2 1.3 1 2.2 1.3 2.6 1.1.2-.1.4-.4.5-.6.2-.3.4-.3.7-.2l1.4.7c.2.1.4.2.5.4.1.2.1.9-.2 1.4-.3.6-1.6 1.1-2.2 1.1-.6 0-1.4 0-4.2-1.7-2.4-1.5-3.9-3.9-4-4.1-.1-.2-.9-1.2-.9-2.4 0-1.1.6-1.7.8-2z"/></svg>
+      </a>
+    </div>
+  </div>
 
   <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
   </button>
 </header>
 
-<!-- ============ MENU OVERLAY ============ -->
+<!-- ============ MENU OVERLAY (mobile) ============ -->
 <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu__top">
     <a href="#inicio" class="logo logo--menu" aria-label="100x100 Asado - Inicio">
-      <svg viewBox="0 0 140 140" class="logo-svg" role="img" aria-hidden="true">
-        <circle cx="70" cy="70" r="66" fill="none" stroke="currentColor" stroke-width="2.5"/>
-        <path id="logoCircleTop2" d="M 20 70 A 50 50 0 0 1 120 70" fill="none"/>
-        <text class="logo-num"><textPath href="#logoCircleTop2" startOffset="50%" text-anchor="middle">100 X 100</textPath></text>
-        <text x="70" y="88" class="logo-title" text-anchor="middle">ASADO</text>
-        <path d="M46 55 L58 78 M58 55 L46 78" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M82 55 L94 78 M94 55 L82 78" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M48 100 Q70 108 92 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <svg class="logo-svg" role="img" aria-hidden="true"><use href="#icon-logo"/></svg>
     </a>
     <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Cerrar menú">&times;</button>
   </div>
@@ -69,116 +98,205 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="inicio">
-    <div class="ph-bg" data-file="hero-bg.jpg" data-desc="Foto de fondo: parrillas encendidas al atardecer, plano general"></div>
+    <div class="ph-bg" data-file="hero-bg.jpg" data-desc="Foto de fondo: parrillas en fila sobre el pasto, atardecer, blanco y negro"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <h1 class="hero__title">EL ASADO,<br>ELEVADO A<br>EXPERIENCIA</h1>
-      <p class="hero__subtitle">Diseñamos experiencias gastronómicas a fuego, combinando producto premium, técnica y servicio profesional.</p>
+      <h1 class="hero__title">EL ASADO, ELEVADO<br>A EXPERIENCIA</h1>
+      <p class="hero__subtitle">Diseñamos experiencias gastronómicas a fuego, combinando producto premium, técnica y servicio profesional. Cocción a leña de quebracho, respetando el tiempo y la esencia del fuego.</p>
       <a href="#contacto" class="btn btn--red">SOLICITAR PRESUPUESTO</a>
     </div>
     <p class="hero__script">El asado argentino,<br>una tradición que nos une.</p>
   </section>
 
-  <!-- ============ FEATURES BAR ============ -->
-  <section class="features">
-    <div class="features__list">
-      <div class="feature">
-        <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 30h32M10 30c0-8 4-10 4-16M38 30c0-8-4-10-4-16M18 30c0-10 2-13 2-18M30 30c0-10-2-13-2-18M6 38h36" stroke-linecap="round"/><path d="M12 10c1 2-1 3 0 5M24 8c1 2-1 3 0 5M36 10c1 2-1 3 0 5" stroke-linecap="round"/></svg>
-        <span>RITUAL DEL FUEGO ARGENTINO</span>
-      </div>
-      <div class="feature">
-        <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="8" width="28" height="36" rx="2"/><rect x="18" y="5" width="12" height="6" rx="1.5"/><path d="M15 20l4 4 8-9M15 30l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>ORGANIZACIÓN Y RESPONSABILIDAD</span>
-      </div>
-      <div class="feature">
-        <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 18c0-6 6-10 14-8 7 2 12 8 10 14-2 7-10 8-16 12-5 3-9 3-11-1-2-4 1-7 3-9 2-2 1-6 0-8z"/></svg>
-        <span>MATERIA PRIMA PREMIUM</span>
-      </div>
-      <div class="feature">
-        <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 6l14 14M14 20L28 6M21 13l-14 14a3 3 0 004 4l14-14M32 6l-4 12 12 14 6-6-14-12z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>EQUIPO PROFESIONAL</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROPUESTA GASTRONOMICA (acordeones) ============ -->
-  <section class="propuesta" id="propuesta">
-    <h2 class="section-title section-title--split">
-      <span class="section-title__line1">ELEGÍ COMO QUERES</span>
-      <span class="section-title__line2">VIVIR EL ASADO</span>
-    </h2>
-
-    <div class="accordion">
-
-      <div class="acc-item">
-        <button class="acc-item__head" aria-expanded="false">
-          <div class="ph-photo acc-item__img" data-file="experiencia-asado-completo.jpg" data-desc="Costillar / achuras terminadas sobre la parrilla"></div>
-          <span class="acc-item__label">EXPERIENCIA ASADO COMPLETO</span>
-          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="acc-item__panel">
-          <p>Texto a completar: descripción de la experiencia de asado completo (menú, tiempos, cortes incluidos).</p>
-        </div>
-      </div>
-
-      <div class="acc-item">
-        <button class="acc-item__head" aria-expanded="false">
-          <div class="ph-photo acc-item__img" data-file="experiencia-finger-food.jpg" data-desc="Pollo al limón y chorizos sobre la plancha"></div>
-          <span class="acc-item__label">EXPERIENCIA FINGER FOOD</span>
-          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="acc-item__panel">
-          <p>Texto a completar: descripción de la experiencia finger food (formato picada / pasantes).</p>
-        </div>
-      </div>
-
-      <div class="acc-item">
-        <button class="acc-item__head" aria-expanded="false">
-          <div class="ph-photo acc-item__img" data-file="suma-experiencias.jpg" data-desc="Provoleta / chorizo grillado con chimichurri"></div>
-          <span class="acc-item__label">SUMÁ EXPERIENCIAS A TU EVENTO</span>
-          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="acc-item__panel">
-          <p>Texto a completar: extras y experiencias adicionales para sumar al evento.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <!-- ============ MAS QUE UN ASADO ============ -->
   <section class="mas-experiencia">
-    <div class="ph-bg mas-experiencia__bg" data-file="mas-experiencia-bg.jpg" data-desc="Fondo oscuro (parrillas / textura), usado como ambientación"></div>
-    <div class="mas-experiencia__watermark" aria-hidden="true">
-      <svg viewBox="0 0 140 140" class="logo-svg"><circle cx="70" cy="70" r="66" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
-      <span class="script mas-experiencia__script">El asado argentino,<br>una tradición que nos une.</span>
+    <div class="mas-experiencia__col">
+      <h2 class="section-title section-title--light-alt">
+        <span>MÁS QUE UN ASADO,</span>
+        <strong>UNA EXPERIENCIA</strong>
+      </h2>
+      <p class="mas-experiencia__text">El fuego es el centro, pero detrás hay técnica, equipo organizado y logística preparada para eventos.</p>
+
+      <div class="features-grid">
+        <div class="feature">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 30h32M10 30c0-8 4-10 4-16M38 30c0-8-4-10-4-16M18 30c0-10 2-13 2-18M30 30c0-10-2-13-2-18M6 38h36" stroke-linecap="round"/><path d="M12 10c1 2-1 3 0 5M24 8c1 2-1 3 0 5M36 10c1 2-1 3 0 5" stroke-linecap="round"/></svg>
+          <span>RITUAL DEL FUEGO ARGENTINO</span>
+        </div>
+        <div class="feature">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 18c0-6 6-10 14-8 7 2 12 8 10 14-2 7-10 8-16 12-5 3-9 3-11-1-2-4 1-7 3-9 2-2 1-6 0-8z"/></svg>
+          <span>MATERIA PRIMA PREMIUM</span>
+        </div>
+        <div class="feature">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 6l14 14M14 20L28 6M21 13l-14 14a3 3 0 004 4l14-14M32 6l-4 12 12 14 6-6-14-12z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>EQUIPO PROFESIONAL</span>
+        </div>
+        <div class="feature">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="8" width="28" height="36" rx="2"/><rect x="18" y="5" width="12" height="6" rx="1.5"/><path d="M15 20l4 4 8-9M15 30l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>ORGANIZACIÓN Y RESPONSABILIDAD</span>
+        </div>
+      </div>
     </div>
 
-    <h2 class="section-title section-title--light">
-      <span>MÁS QUE UN ASADO,</span>
-      <strong>UNA EXPERIENCIA</strong>
+    <div class="mas-experiencia__col mas-experiencia__col--photo">
+      <div class="polaroid polaroid--wide">
+        <span class="polaroid__tape"></span>
+        <div class="ph-photo polaroid__img" data-file="finger-food-servido.jpg" data-desc="Tablas de madera con pinchos servidos, marca 100x100 Asado sobre servilletas"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROPUESTA GASTRONOMICA (tabs) ============ -->
+  <section class="propuesta" id="propuesta">
+    <h2 class="section-title section-title--inline">
+      <span class="section-title__red">ELEGÍ COMO QUERES</span>
+      <strong>VIVIR EL ASADO</strong>
     </h2>
 
-    <div class="polaroid polaroid--wide">
-      <span class="polaroid__tape"></span>
-      <div class="ph-photo polaroid__img" data-file="finger-food-servido.jpg" data-desc="Tablas de madera con pinchos servidos, marca 100x100 Asado sobre servilletas"></div>
+    <div class="tabs">
+      <div class="tabs__nav" role="tablist">
+        <button class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="asado-completo">EXPERIENCIA ASADO COMPLETO</button>
+        <button class="tabs__btn" role="tab" aria-selected="false" data-tab="finger-food">EXPERIENCIA FINGER FOOD</button>
+        <button class="tabs__btn" role="tab" aria-selected="false" data-tab="suma-experiencias">SUMÁ EXPERIENCIAS A TU EVENTO</button>
+      </div>
+
+      <div class="tabs__panel is-active" id="tab-asado-completo" role="tabpanel">
+        <span class="tabs__flag" aria-hidden="true">
+          <svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#74acdf"/><rect y="13.33" width="60" height="13.33" fill="#fff"/><circle cx="30" cy="20" r="4.2" fill="#f6b40e" stroke="#85340a" stroke-width="0.6"/></svg>
+        </span>
+        <div class="ph-photo tabs__img" data-file="experiencia-asado-completo.jpg" data-desc="Costillar / achuras terminadas sobre la parrilla, mano con pinza"></div>
+        <div class="tabs__content">
+          <p class="script tabs__tag">incluye</p>
+          <div class="menu-list">
+            <div class="menu-list__col">
+              <h4>// ENTRADA:</h4>
+              <ul><li>Tabla completa de quesos y fiambres de primera calidad</li></ul>
+              <h4>// SELECCIÓN DE CARNES:</h4>
+              <ul>
+                <li>Mollejas doradas y crocantes, terminadas con limón fresco</li>
+                <li>Chorizo puro cerdo</li>
+                <li>Entraña a las brasas</li>
+                <li>Matambre de vaca a la pizza</li>
+              </ul>
+            </div>
+            <div class="menu-list__col">
+              <h4>// ENSALADAS</h4>
+              <ul>
+                <li>Zanahoria y huevo</li>
+                <li>Rúcula, parmesano y tomates cherrys</li>
+              </ul>
+              <h4>// GUARNICIÓN</h4>
+              <ul>
+                <li>Papas fritas crocantes</li>
+                <li>Provoleta crocante por fuera y cremosa por dentro</li>
+              </ul>
+              <h4>// ACOMPAÑAMIENTOS</h4>
+              <ul><li class="menu-list__pending">(texto a completar)</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__panel" id="tab-finger-food" role="tabpanel">
+        <span class="tabs__flag" aria-hidden="true">
+          <svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#74acdf"/><rect y="13.33" width="60" height="13.33" fill="#fff"/><circle cx="30" cy="20" r="4.2" fill="#f6b40e" stroke="#85340a" stroke-width="0.6"/></svg>
+        </span>
+        <div class="ph-photo tabs__img" data-file="experiencia-finger-food.jpg" data-desc="Pollo al limón y chorizos sobre la plancha"></div>
+        <div class="tabs__content">
+          <p class="script tabs__tag">incluye</p>
+          <p class="menu-list__pending">(texto a completar: detalle del menú finger food)</p>
+        </div>
+      </div>
+
+      <div class="tabs__panel" id="tab-suma-experiencias" role="tabpanel">
+        <span class="tabs__flag" aria-hidden="true">
+          <svg viewBox="0 0 60 40"><rect width="60" height="40" fill="#74acdf"/><rect y="13.33" width="60" height="13.33" fill="#fff"/><circle cx="30" cy="20" r="4.2" fill="#f6b40e" stroke="#85340a" stroke-width="0.6"/></svg>
+        </span>
+        <div class="ph-photo tabs__img" data-file="suma-experiencias.jpg" data-desc="Provoleta / chorizo grillado con chimichurri"></div>
+        <div class="tabs__content">
+          <p class="script tabs__tag">incluye</p>
+          <p class="menu-list__pending">(texto a completar: extras disponibles para sumar al evento)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAL & MONTAJE ============ -->
+  <section class="servicio" id="servicio">
+    <div class="ph-bg servicio__bg" data-file="collage-eventos.jpg" data-desc="Collage de fotos de eventos / parrillas (fondo ambientación, varias fotos superpuestas)"></div>
+    <div class="servicio__overlay"></div>
+
+    <div class="servicio__card">
+      <svg class="servicio__asterisk" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M24 8v32M10 16l28 16M38 16L10 32" stroke-linecap="round"/></svg>
+
+      <p class="eyebrow eyebrow--inline">/ NUESTRO SERVICIO</p>
+      <h2 class="section-title section-title--inline section-title--card">
+        <strong>PERSONAL &amp; MONTAJE</strong>
+      </h2>
+
+      <ul class="icon-list icon-list--3col">
+        <li>
+          <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 20c0-7 5-12 10-12s10 5 10 12" stroke-linecap="round"/><path d="M12 20h24v6a12 12 0 01-24 0v-6z"/><path d="M18 38h12M20 32v6M28 32v6"/></svg>
+          <p>Chefs y parrilleros <strong>especializados</strong></p>
+        </li>
+        <li>
+          <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 6l14 14M14 20L28 6M21 13l-14 14a3 3 0 004 4l14-14M32 6l-4 12 12 14 6-6-14-12z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>Montaje <strong>integral</strong> del evento</p>
+        </li>
+        <li>
+          <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 6h16l-2 16a6 6 0 01-12 0L16 6z"/><path d="M24 22v14M17 36h14"/><path d="M34 12c4 1 6 4 6 8s-3 6-7 6" stroke-linecap="round"/></svg>
+          <p>Camareros para <strong>atención personalizada</strong></p>
+        </li>
+        <li>
+          <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 16h20l-3 24a3 3 0 01-3 3H20a3 3 0 01-3-3l-3-24z"/><path d="M11 16h26M18 16l2-6h8l2 6"/></svg>
+          <p>Limpieza <strong>final</strong> del espacio</p>
+        </li>
+        <li>
+          <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="8" width="28" height="36" rx="2"/><rect x="18" y="5" width="12" height="6" rx="1.5"/><path d="M15 20l4 4 8-9M15 30l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>Coordinación y <strong>operación</strong> durante todo el servicio</p>
+        </li>
+      </ul>
+
+      <p class="script servicio__handwritten">Eventos de<br>todo tipo</p>
+    </div>
+
+    <div class="servicio__photos">
+      <svg class="servicio__stamp" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-stamp"/></svg>
+      <div class="polaroid servicio__photo servicio__photo--1">
+        <span class="polaroid__tape"></span>
+        <div class="ph-photo polaroid__img" data-file="montaje-evento.jpg" data-desc="Montaje de parrillas y carpa en jardín / evento al aire libre"></div>
+      </div>
+      <div class="polaroid servicio__photo servicio__photo--2">
+        <span class="polaroid__tape"></span>
+        <div class="ph-photo polaroid__img" data-file="chef-cocina.jpg" data-desc="Chef en cocina profesional detrás de la parrilla"></div>
+      </div>
     </div>
   </section>
 
   <!-- ============ DETRAS DEL FUEGO ============ -->
   <section class="detras-del-fuego">
-    <h2 class="script section-heading-script">Detrás del fuego...</h2>
-    <p class="detras-del-fuego__text">
-      100x100 Asado nació con una idea clara: <strong>llevar la tradición del asado argentino a un estándar profesional,</strong>
-      sin perder el ritual ni la esencia del encuentro alrededor del fuego.
-    </p>
-
-    <div class="polaroid polaroid--wide">
-      <span class="polaroid__tape"></span>
-      <div class="ph-photo polaroid__img" data-file="asador-cruz.jpg" data-desc="Asador con cortes de carne a la cruz, parrillero al fondo"></div>
-      <span class="sticky-note">No improvisamos,<br>trabajamos con estructura.</span>
+    <div class="detras-del-fuego__photo">
+      <svg class="detras-del-fuego__badge" viewBox="0 0 140 140" aria-hidden="true"><use href="#icon-logo"/></svg>
+      <div class="polaroid polaroid--tall">
+        <div class="ph-photo polaroid__img" data-file="asador-cruz.jpg" data-desc="Asador con cortes de carne a la cruz, parrillero al fondo, junto al fuego"></div>
+      </div>
+      <span class="sticky-note sticky-note--outside">No improvisamos,<br>trabajamos con estructura.</span>
     </div>
-    <p class="script detras-del-fuego__caption">Asador de la casa.</p>
+
+    <div class="detras-del-fuego__col">
+      <h2 class="script section-heading-script">Detrás del fuego...</h2>
+      <p class="detras-del-fuego__text">
+        100x100 Asado nació con una idea clara: <strong>llevar la tradición del asado argentino a un estándar profesional,</strong>
+        sin perder el ritual ni la esencia del encuentro alrededor del fuego.
+      </p>
+      <p class="detras-del-fuego__text">
+        Con el tiempo, el proyecto evolucionó incorporando estructura, logística y un equipo comprometido con cada detalle,
+        logrando ejecutar eventos de alto nivel tanto sociales como corporativos.
+      </p>
+      <p class="detras-del-fuego__text">
+        Hoy, nuestra experiencia nos llevó a trabajar con clientes exigentes, incluyendo reconocidas figuras del deporte,
+        la música y los medios, que confían en nosotros para crear momentos únicos.
+      </p>
+    </div>
   </section>
 
   <!-- ============ NOSOTROS ============ -->
@@ -196,158 +314,62 @@
         <strong>porque entiendo que un buen asado no es solo comida.</strong>
       </p>
 
-      <p class="script paper-card__script">
-        Es encuentro,<br>
-        Es celebración,<br>
-        Es experiencia.
-      </p>
-
-      <div class="stamp" aria-hidden="true">
-        <svg viewBox="0 0 120 120">
-          <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="1"/>
-          <path id="stampTop" d="M14 60a46 46 0 0 1 92 0" fill="none"/>
-          <path id="stampBottom" d="M106 60a46 46 0 0 1-92 0" fill="none"/>
-          <text class="stamp__text"><textPath href="#stampTop" startOffset="50%" text-anchor="middle">ARGENTINA</textPath></text>
-          <text class="stamp__text"><textPath href="#stampBottom" startOffset="50%" text-anchor="middle">100x100 ASADO</textPath></text>
-          <path d="M40 55h40v6a5 5 0 01-5 5H45a5 5 0 01-5-5v-6z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M45 55v-8M55 55v-10M65 55v-8M75 55v-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
+      <div class="paper-card__row">
+        <p class="script paper-card__script">
+          Es encuentro,<br>
+          Es celebración,<br>
+          Es experiencia.
+        </p>
+        <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-stamp"/></svg>
       </div>
 
-      <div class="polaroid-row">
-        <div class="polaroid">
-          <span class="polaroid__tape"></span>
-          <div class="ph-photo polaroid__img" data-file="asado-cruz-fuego.jpg" data-desc="Achuras / cortes al asador de cruz junto al fuego"></div>
-        </div>
-        <div class="polaroid">
-          <span class="polaroid__tape"></span>
-          <div class="ph-photo polaroid__img" data-file="chorizo-chimichurri.jpg" data-desc="Chorizo cortado en tabla con chimichurri siendo servido"></div>
-        </div>
+      <div class="polaroid paper-card__photo">
+        <div class="ph-photo polaroid__img" data-file="chorizo-chimichurri.jpg" data-desc="Chorizo cortado en tabla con chimichurri siendo servido"></div>
       </div>
+    </div>
+
+    <div class="nosotros__photo">
+      <svg class="nosotros__badge" viewBox="0 0 140 140" aria-hidden="true"><use href="#icon-logo"/></svg>
+      <div class="ph-photo nosotros__img" data-file="chef-gonzalo.jpg" data-desc="Gonzalo (chef) parado frente a las parrillas con cortes de carne en la mesada"></div>
+      <p class="script nosotros__caption">Asador de la casa.</p>
     </div>
   </section>
 
-  <!-- ============ PERSONAL & MONTAJE ============ -->
-  <section class="servicio" id="servicio">
-    <p class="eyebrow">/ NUESTRO SERVICIO</p>
-
-    <div class="stamp stamp--corner" aria-hidden="true">
-      <svg viewBox="0 0 120 120">
-        <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="2"/>
-        <circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="1"/>
-        <path id="stampTop2" d="M14 60a46 46 0 0 1 92 0" fill="none"/>
-        <path id="stampBottom2" d="M106 60a46 46 0 0 1-92 0" fill="none"/>
-        <text class="stamp__text"><textPath href="#stampTop2" startOffset="50%" text-anchor="middle">ARGENTINA</textPath></text>
-        <text class="stamp__text"><textPath href="#stampBottom2" startOffset="50%" text-anchor="middle">100x100 ASADO</textPath></text>
-        <path d="M40 55h40v6a5 5 0 01-5 5H45a5 5 0 01-5-5v-6z" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M45 55v-8M55 55v-10M65 55v-8M75 55v-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </div>
-
-    <h2 class="section-title section-title--split">
-      <span class="section-title__line1">PERSONAL &amp;</span>
-      <span class="section-title__line2">MONTAJE</span>
-    </h2>
-
-    <ul class="icon-list">
-      <li>
-        <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 20c0-7 5-12 10-12s10 5 10 12" stroke-linecap="round"/><path d="M12 20h24v6a12 12 0 01-24 0v-6z"/><path d="M18 38h12M20 32v6M28 32v6"/></svg>
-        <p>Chefs y parrilleros <strong>especializados</strong></p>
-      </li>
-      <li>
-        <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 6h16l-2 16a6 6 0 01-12 0L16 6z"/><path d="M24 22v14M17 36h14"/><path d="M34 12c4 1 6 4 6 8s-3 6-7 6" stroke-linecap="round"/></svg>
-        <p>Camareros para <strong>atención personalizada</strong></p>
-      </li>
-      <li>
-        <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="8" width="28" height="36" rx="2"/><rect x="18" y="5" width="12" height="6" rx="1.5"/><path d="M15 20l4 4 8-9M15 30l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p>Coordinación y <strong>operación</strong> durante todo el servicio</p>
-      </li>
-      <li>
-        <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 6l14 14M14 20L28 6M21 13l-14 14a3 3 0 004 4l14-14M32 6l-4 12 12 14 6-6-14-12z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p>Montaje <strong>integral</strong> del evento</p>
-      </li>
-      <li>
-        <svg class="icon-list__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 16h20l-3 24a3 3 0 01-3 3H20a3 3 0 01-3-3l-3-24z"/><path d="M11 16h26M18 16l2-6h8l2 6"/></svg>
-        <p>Limpieza <strong>final</strong> del espacio</p>
-      </li>
-      <li class="icon-list__handwritten">
-        <svg class="icon-list__icon icon-list__icon--asterisk" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 8v32M10 16l28 16M38 16L10 32" stroke-linecap="round"/></svg>
-        <p class="script">Eventos de<br>todo tipo</p>
-      </li>
-    </ul>
-
-    <div class="polaroid-row">
-      <div class="polaroid">
-        <span class="polaroid__tape"></span>
-        <div class="ph-photo polaroid__img" data-file="montaje-evento.jpg" data-desc="Montaje de parrillas y carpa en jardín / evento al aire libre"></div>
-      </div>
-      <div class="polaroid">
-        <span class="polaroid__tape"></span>
-        <div class="ph-photo polaroid__img" data-file="chef-cocina.jpg" data-desc="Chef en cocina profesional detrás de la parrilla"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GALERIA (placeholder funcional) ============ -->
-  <section class="galeria" id="galeria">
-    <h2 class="section-title section-title--split">
-      <span class="section-title__line1">NUESTRA</span>
-      <span class="section-title__line2">GALERÍA</span>
-    </h2>
-    <div class="galeria__grid">
-      <div class="ph-photo galeria__item" data-file="galeria-1.jpg" data-desc="Foto de galería 1"></div>
-      <div class="ph-photo galeria__item" data-file="galeria-2.jpg" data-desc="Foto de galería 2"></div>
-      <div class="ph-photo galeria__item" data-file="galeria-3.jpg" data-desc="Foto de galería 3"></div>
-      <div class="ph-photo galeria__item" data-file="galeria-4.jpg" data-desc="Foto de galería 4"></div>
-      <div class="ph-photo galeria__item" data-file="galeria-5.jpg" data-desc="Foto de galería 5"></div>
-      <div class="ph-photo galeria__item" data-file="galeria-6.jpg" data-desc="Foto de galería 6"></div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ (placeholder funcional) ============ -->
-  <section class="faq" id="faq">
-    <h2 class="section-title section-title--split">
-      <span class="section-title__line1">PREGUNTAS</span>
-      <span class="section-title__line2">FRECUENTES</span>
-    </h2>
-    <div class="accordion accordion--faq">
-      <div class="acc-item acc-item--faq">
-        <button class="acc-item__head" aria-expanded="false">
-          <span class="acc-item__label">¿Con cuánta anticipación debo reservar?</span>
-          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
-      </div>
-      <div class="acc-item acc-item--faq">
-        <button class="acc-item__head" aria-expanded="false">
-          <span class="acc-item__label">¿Qué incluye el servicio?</span>
-          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
-      </div>
-      <div class="acc-item acc-item--faq">
-        <button class="acc-item__head" aria-expanded="false">
-          <span class="acc-item__label">¿Trabajan en todo el país?</span>
-          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
-      </div>
-    </div>
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <p class="stats__number">+400</p>
+    <p class="script stats__label">Eventos realizados</p>
   </section>
 
   <!-- ============ CONTACTO / FORMULARIO ============ -->
   <section class="contacto" id="contacto">
-    <div class="ph-bg contacto__bg" data-file="contacto-bg.jpg" data-desc="Fondo con llamas / fuego para la sección de contacto"></div>
+    <div class="ph-bg contacto__bg" data-file="contacto-bg.jpg" data-desc="Fondo con brasas / fuego y siluetas de palmeras para la sección de contacto"></div>
     <div class="contacto__overlay"></div>
 
-    <h2 class="contacto__title">
-      CONTANOS TU EVENTO,<br>
-      NOSOTROS EJECUTAMOS<br>
-      LA EXPERIENCIA
-    </h2>
+    <div class="contacto__col contacto__col--info">
+      <p class="eyebrow eyebrow--light">/ PRESUPUESTO</p>
+      <h2 class="contacto__title">
+        CONTANOS TU EVENTO,<br>
+        <span>NOSOTROS EJECUTAMOS<br>LA EXPERIENCIA</span>
+      </h2>
+      <p class="contacto__intro">
+        Diseñamos cada propuesta según tipo de evento, cantidad de invitados y ubicación.
+        <strong>Completá el formulario</strong> y te respondemos a la brevedad.
+      </p>
 
-    <form class="form" id="presupuestoForm">
+      <div class="form__perks">
+        <div class="form__perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Te respondemos<br>dentro de las 24 hs.</span>
+        </div>
+        <div class="form__perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/><path d="M16 16l3 3 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Propuesta<br>personalizada</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="form contacto__col contacto__col--form" id="presupuestoForm">
       <div class="form__grid">
         <div class="form__field">
           <label for="nombre">NOMBRE COMPLETO</label>
@@ -412,20 +434,127 @@
         </div>
       </div>
 
-      <div class="form__footer">
-        <div class="form__perks">
-          <div class="form__perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Te respondemos<br>dentro de las 24 hs.</span>
-          </div>
-          <div class="form__perk">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/><path d="M16 16l3 3 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Propuesta<br>personalizada</span>
-          </div>
-        </div>
-        <button type="submit" class="btn btn--red">SOLICITAR PRESUPUESTO</button>
-      </div>
+      <button type="submit" class="btn btn--red">SOLICITAR PRESUPUESTO</button>
     </form>
+  </section>
+
+  <!-- ============ GALERIA PREVIEW: ASI SE VIVE EL FUEGO ============ -->
+  <section class="galeria-preview" id="galeria">
+    <div class="galeria-preview__head">
+      <h2 class="section-title section-title--inline section-title--dark">
+        <strong>ASÍ SE VIVE EL FUEGO</strong> <span class="script">en cada evento</span>
+      </h2>
+      <a href="#galeria" class="btn btn--red">VER GALERÍA</a>
+    </div>
+
+    <div class="galeria-preview__row">
+      <div class="ph-photo galeria-preview__item" data-file="galeria-1.jpg" data-desc="PENDIENTE: foto a subir por el cliente"></div>
+      <div class="ph-photo galeria-preview__item" data-file="galeria-2.jpg" data-desc="PENDIENTE: foto a subir por el cliente"></div>
+      <div class="ph-photo galeria-preview__item" data-file="galeria-3.jpg" data-desc="PENDIENTE: foto a subir por el cliente"></div>
+      <div class="ph-photo galeria-preview__item" data-file="galeria-4.jpg" data-desc="PENDIENTE: foto a subir por el cliente"></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <h2 class="section-title section-title--split section-title--faq">
+      <span>PREGUNTAS FRECUENTES</span>
+    </h2>
+
+    <div class="faq__body">
+    <div class="faq__photo">
+      <div class="polaroid polaroid--tall">
+        <div class="ph-photo polaroid__img" data-file="asador-cruz.jpg" data-desc="Asador con cortes de carne a la cruz (misma foto de 'Detrás del fuego')"></div>
+      </div>
+      <svg class="faq__stamp" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-stamp"/></svg>
+    </div>
+
+    <div class="accordion accordion--faq">
+      <div class="acc-item acc-item--faq">
+        <button class="acc-item__head" aria-expanded="false">
+          <span class="acc-item__label">¿Qué incluye el servicio de 100x100 Asado?</span>
+          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
+      </div>
+      <div class="acc-item acc-item--faq">
+        <button class="acc-item__head" aria-expanded="false">
+          <span class="acc-item__label">¿Trabajan con menú fijo o personalizado?</span>
+          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
+      </div>
+      <div class="acc-item acc-item--faq">
+        <button class="acc-item__head" aria-expanded="false">
+          <span class="acc-item__label">¿En qué zonas trabajan?</span>
+          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
+      </div>
+      <div class="acc-item acc-item--faq">
+        <button class="acc-item__head" aria-expanded="false">
+          <span class="acc-item__label">¿Necesitan un espacio específico para cocinar?</span>
+          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
+      </div>
+      <div class="acc-item acc-item--faq">
+        <button class="acc-item__head" aria-expanded="false">
+          <span class="acc-item__label">¿Cuál es el mínimo de invitados?</span>
+          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
+      </div>
+      <div class="acc-item acc-item--faq">
+        <button class="acc-item__head" aria-expanded="false">
+          <span class="acc-item__label">¿Cómo se realiza la reserva?</span>
+          <svg class="acc-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc-item__panel"><p>Respuesta a completar.</p></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============ COMUNIDAD QUE VIVE EL ASADO ============ -->
+  <section class="comunidad">
+    <div class="comunidad__col comunidad__col--text">
+      <h2 class="section-title section-title--inline section-title--light-alt">
+        <span>COMUNIDAD</span><strong>QUE VIVE EL ASADO</strong>
+      </h2>
+      <p class="comunidad__text">Compartiendo la pasión por el fuego, la tradición parrillera y los encuentros alrededor del asado.</p>
+
+      <div class="comunidad__contact">
+        <a href="https://wa.me/5491126082311" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 18l-1.4 3.4L8 20a8 8 0 104-1z" stroke-linejoin="round"/></svg>
+          +549 11 2608-2311
+        </a>
+        <a href="mailto:100x100asado@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          100X100ASADO@GMAIL.COM
+        </a>
+      </div>
+    </div>
+
+    <div class="comunidad__col comunidad__col--social">
+      <div class="phone-mock">
+        <div class="ph-photo phone-mock__screen" data-file="instagram-perfil.jpg" data-desc="Captura del perfil de Instagram @100x100asado"></div>
+        <span class="phone-mock__stat">+957MIL</span>
+      </div>
+      <div class="phone-mock phone-mock--back">
+        <div class="ph-photo phone-mock__screen" data-file="tiktok-perfil.jpg" data-desc="Captura del perfil de TikTok @100x100asado"></div>
+        <span class="phone-mock__stat">+2.2M</span>
+      </div>
+    </div>
+
+    <div class="comunidad__col comunidad__col--testimonios">
+      <p class="script comunidad__testimonios-title">Una experiencia que ya compartieron grandes referentes</p>
+      <div class="testimonios">
+        <div class="polaroid testimonios__item"><div class="ph-photo polaroid__img" data-file="referente-1.jpg" data-desc="Foto con figura del deporte/medios 1"></div></div>
+        <div class="polaroid testimonios__item"><div class="ph-photo polaroid__img" data-file="referente-2.jpg" data-desc="Foto con figura del deporte/medios 2 (con camiseta de Boca)"></div></div>
+        <div class="polaroid testimonios__item"><div class="ph-photo polaroid__img" data-file="referente-3.jpg" data-desc="Foto con figura del deporte/medios 3"></div></div>
+      </div>
+    </div>
   </section>
 
   <!-- ============ FOOTER ============ -->
