@@ -848,6 +848,46 @@ img { max-width: 100%; display: block; }
 .galeria-preview__item { height: 200px; border-radius: 2px; }
 
 /* ============================================================
+   ACORDEÓN (base) — usado por el FAQ
+   ============================================================ */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.acc-item__head {
+  position: relative;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  font-family: 'Poppins', sans-serif;
+}
+.acc-item__label { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); }
+.acc-item__chevron {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--red);
+  transition: transform 0.25s ease;
+}
+.acc-item__head[aria-expanded="true"] .acc-item__chevron { transform: rotate(180deg); }
+.acc-item__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.acc-item__panel p { padding: 0 0 18px; font-size: 0.9rem; line-height: 1.5; color: var(--text-dark); }
+.acc-item__head[aria-expanded="true"] + .acc-item__panel { max-height: 220px; }
+
+/* ============================================================
    FAQ (fondo rojo)
    ============================================================ */
 
