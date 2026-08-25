@@ -525,9 +525,12 @@ img { max-width: 100%; display: block; }
 .tabs__img { height: 220px; border-radius: 2px; }
 
 .tabs__content {
-  background: var(--cream-2);
+  background-color: var(--cream);
+  background-image: linear-gradient(rgba(245,240,229,0.85), rgba(245,240,229,0.85)), url('../images/paper-texture.jpg');
+  background-size: cover;
   padding: 24px 20px;
   border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 .tabs__tag {
   display: inline-block;
