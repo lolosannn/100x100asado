@@ -7,7 +7,7 @@ archivo nuevo con el mismo nombre.
 | Archivo                          | Dónde se usa                                                      |
 |-----------------------------------|--------------------------------------------------------------------|
 | `hero-bg.jpg`                    | Fondo de la portada                                                |
-| `finger-food-servido.jpg`        | Polaroid "Más que un asado" (tablas con pinchos)                   |
+| `finger-food-servido.webp`       | Foto "Más que un asado" (tablas con pinchos, PNG con fondo transparente convertido a webp para que pese poco) |
 | `experiencia-asado-completo.jpg` | Tab "Experiencia asado completo"                                   |
 | `experiencia-finger-food.jpg`    | Tab "Experiencia finger food"                                      |
 | `suma-experiencias.jpg`          | Tab "Sumá experiencias a tu evento"                                |

@@ -416,7 +416,7 @@ img { max-width: 100%; display: block; }
   max-width: 480px;
 }
 .mas-experiencia__col--photo { display: flex; justify-content: center; align-items: center; }
-.mas-experiencia__photo { width: 100%; max-width: 620px; height: auto; }
+.mas-experiencia__photo { width: 100%; height: auto; display: block; }
 
 /* ============================================================
    POLAROID / PAPEL
