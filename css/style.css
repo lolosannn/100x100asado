@@ -479,26 +479,38 @@ img { max-width: 100%; display: block; }
    PROPUESTA GASTRONOMICA — tabs
    ============================================================ */
 
-.propuesta { background: var(--cream); padding: 56px 24px 70px; max-width: var(--max-width); margin: 0 auto; }
+.propuesta {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0 50px;
+}
+.propuesta__bg { opacity: 0.5; }
+.propuesta__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(15,12,9,0.55), rgba(15,12,9,0.85));
+  z-index: 0;
+}
+.propuesta > .section-title, .propuesta > .tabs { position: relative; z-index: 1; }
+.propuesta .section-title--inline strong { color: var(--text-light); }
 
-.tabs { margin-top: 30px; }
+.tabs { margin-top: 22px; max-width: var(--max-width); margin-left: auto; margin-right: auto; padding: 0 24px; }
 
 .tabs__nav {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 .tabs__btn {
   background: none;
   border: none;
   cursor: pointer;
   text-align: left;
-  padding: 14px 4px;
+  padding: 12px 4px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.3px;
-  color: var(--text-dark);
+  color: var(--text-light);
   border-bottom: 3px solid transparent;
   margin-bottom: -1px;
 }
@@ -1011,10 +1023,12 @@ img { max-width: 100%; display: block; }
   .mas-experiencia { flex-direction: row; align-items: center; padding: 90px 60px; gap: 60px; }
   .mas-experiencia__col { flex: 1; }
 
-  .propuesta { padding: 90px 60px; }
-  .tabs__nav { flex-direction: row; gap: 34px; border-bottom: 1px solid rgba(0,0,0,0.12); }
+  .propuesta { padding: 60px 0; }
+  .propuesta .section-title { padding-left: 60px; padding-right: 60px; }
+  .tabs { padding: 0 60px; }
+  .tabs__nav { flex-direction: row; gap: 34px; border-bottom: 1px solid rgba(255,255,255,0.25); }
   .tabs__panel.is-active { flex-direction: row; align-items: stretch; gap: 30px; }
-  .tabs__img { flex: 1; height: auto; min-height: 380px; }
+  .tabs__img { flex: 1; height: auto; min-height: 280px; }
   .tabs__content { flex: 1; }
   .menu-list { flex-direction: row; gap: 40px; }
   .menu-list__col { flex: 1; }

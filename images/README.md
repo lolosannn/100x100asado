@@ -35,6 +35,8 @@ archivo nuevo con el mismo nombre.
 |-----------------------------------|----------------------------------------------------------------------|
 | `galeria-1.jpg` … `galeria-4.jpg`| Fila "Así se vive el fuego" — me dijiste que me las vas a pasar aparte, así que quedaron con el placeholder gris. |
 | `referente-1.jpg` a `referente-3.jpg` | Fotos con figuras/referentes en la sección "Comunidad" (no llegaron en la carpeta subida). |
+| `propuesta-bg.jpg`                | Fondo oscuro en blanco y negro de la sección "Elegí como queres vivir el asado" (textura de piedra/carbón, como en el diseño). |
+| `icon-ritual-fuego`, `icon-materia-prima`, `icon-equipo-profesional` | Íconos vistos en el chat para "Ritual del fuego argentino", "Materia prima premium" y "Equipo profesional" — mandámelos por GitHub (como hiciste con las fotos) para reemplazar mis SVG dibujados. |
 
 ### Sin usar todavía (`images/extra/`)
 
